@@ -7,4 +7,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'dist/trainSchedule.zip', fingerprint: true
+        }
+    }
 }
